@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Styles -->
+    <link rel='stylesheet' href='/public/css/style.css'>
+  
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js" defer></script>
+</head>
+<body class="bg-deep-blue text-deep-gray">
+    <!-- NAVIGATION -->
+    <header x-data="{isOpen: false}">
+        <div class="max-w-8xl mx-auto px-8">
+            <div class="flex items-center justify-between">
+                    <img class="w-20 h-20 text-green" src="/public/images/portfolio_logo.png" alt="portfolio_logo">
+                <div class="hidden sm:flex items-center px-10 sm:px-0">
+                    <a href="#about"><span class="text-green mr-2">01.</span><span class="mr-6 text-light-gray hover:text-green">About</span></a>
+                    <a href="#experience"><span class="text-green mr-2">02.</span><span class="mr-6 text-light-gray hover:text-green">Experience</span></a>
+                    <a href="#portfolio"><span class="text-green mr-2">03.</span><span class="mr-6 text-light-gray hover:text-green">Portfolio</span></a>
+                    <a href="#contact"><span class="text-green mr-2">04.</span><span class="mr-6 text-light-gray hover:text-green">Contact</span></a>
+                    <a href="/resume.pdf" target="_blank" class="border rounded px-4 py-2 text-green">Resume</a>
+                </div>
+                <button @click="isOpen = !isOpen" type="button" class="text-green-400 block sm:hidden cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-green" fill="none" viewBox="0 0   24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button> 
+            </div>
+            <!-- Mobile menu -->
+            <div x-show="isOpen" class="sm:hidden">
+                <div class="space-y-4">
+                    <a href="#about" class="block"><span class="text-green mr-2">01.</span><span class="mr-6 text-light-gray hover:text-green">About</span></a>
+                    <a href="#experience" class="block"><span class="text-green mr-2">02.</span><span class="mr-6 text-light-gray hover:text-green">Experience</span></a>
+                    <a href="#portfolio"class="block"><span class="text-green mr-2">03.</span><span class="mr-6 text-light-gray hover:text-green">Portfolio</span></a>
+                    <a href="#contact" class="block"><span class="text-green mr-2">04.</span><span class="mr-6 text-light-gray hover:text-green">Contact</span></a>
+                    <a href="/resume.pdf" target="_blank" class="border rounded px-4 py-2 text-green inline-block">Resume</a>
+                </div>
+            </div> 
+        </div>
+    </header>
+    <main>
+        <section id="intro" class="py-20" style="height: 80vh;">
+            <div class="max-w-6xl mx-auto">
+                <div class="space-y-8 px-10 sm:px-0">
+                    <h3 class="text-xl text-green">Hi, my name is</h3>
+                    <h1 class="text-6xl font-bold text-light-gray">Collins Omondi.</h1>
+                    <h1 class="text-5xl font-bold">I build things for the web.</h1>
+                    <p class="text-lg leading-relaxed pb-10">
+                        I'm a Web-developer based in Nairobi who specializes in building (and occasionally designing) exceptional digital experiences. <br>
+                        I advance technology by contributing to open source 
+                        Currently, I'm a developer at <a href="https://snobole.com/" target="_blank" class="text-blue-300 text-green">Snobole</a> focused on building accessible, <br> human-centered products.
+                    </p>
+                    <a href="#collinsomondi825@gmail.com" target="_blank"><span class="border rounded px-4 py-3 text-green">Get In Touch</span></a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="py-20">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 px-10 sm:px-0 justify-center">
+                    <div>
+                        <h1 class="pb-6"> <span class="text-green mr-2 text-xl">01.</span><span class="text-light-gray font-bold text-3xl">About Me</span></h1>
+                        <div class="order-last sm:order-first">
+                            <p class="space-y-4 text-lg">
+                                Hello! I'm Omondi Collins.I design, develop and deploy websites for clients. <br>
+                                I write client-facing code that consume web services. <br>
+                                Here's a few technologies I've been working with recently:
+                            </p>    
+                            <ul class="text-lg space-y-2">
+                                <li><span class="text-green mr-2">&#10148;</span><span>HTML & Tailwind CSS</span></li>
+                                <li><span class="text-green mr-2">&#10148;</span><span>Javascript & AlpineJS</span></li>
+                                <li><span class="text-green mr-2">&#10148;</span><span>ReactJS</span></li>
+                                <li><span class="text-green mr-2">&#10148;</span><span>Gitbash</span></li>
+                                <li><span class="text-green mr-2">&#10148;</span><span>Git & Github</span></li>
+                            </ul>    
+                            </p>
+                        </div>
+                    </div>
+                    <div class="w-full flex items-center sm:justify-center mt-10">
+                        <div class="w-1/2 flex justify-center">
+                            <div class="border-2 border-green rounded">
+                                <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="programmer" class="w-full h-auto -mt-8 -ml-6 mb-8 mr-6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="py-20">
+            <div class="max-w-6xl mx-auto">
+                        <h1 class="pb-6 px-10 sm:px-0"> <span class="text-green mr-2 text-xl">02.</span><span class="text-light-gray text-3xl font-bold">Experience</span></h1>
+                    <div class="flex space-x-10 px-10 sm:px-0">
+                        <div>
+                            <a href="" class="px-2 py-4 border-l border-green text-green">Snobole</a>
+                        </div>
+                        <div>
+                            <h1 class="text-lg text-light-gray font-bold">Web-developer intern<span class="text-green"> @ <a href="https://snobole.com/" target="_blank">Snobole software</a></span></h1>
+                            <p>Feruary 2021 - Present</p>
+                            <p>
+                                <ul class="text-lg">
+                                    <li><span class="text-green mr-2">&#10148;</span>Diagnosing and fixing bugs<span></span></li>
+                                    <li><span class="text-green mr-2">&#10148;</span>Write modern, performant, maintainable code for a diverse array of client and internal projects<span></span></li>
+                                    <li><span class="text-green mr-2">&#10148;</span>Scoping out and developing new features in line with a specification and to a deadline<span></span></li>
+                                    <li><span class="text-green mr-2">&#10148;</span><span>Work with a variety of different languages developer tools, frameworks and Version Control Systems such as JavaScript, <br> AlpineJS,Git & Gitbash, GIMP, Node</span></li>
+                                    <li><span class="text-green mr-2">&#10148;</span><span>Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis</span></li>
+                                </ul>    
+                            </p>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section id="portfolio" class="py-20">
+            <div class="max-w-6xl mx-auto">
+                        <h1 class="pb-6 px-10 sm:px-0"> <span class="text-green mr-2 text-xl">03.</span><span class="font-bold text-light-gray text-3xl">Portfolio</span></h1>
+                <div class="grid grid-cols-1 sm:grid-cols-2 px-10 sm:px-0">
+                        <a href="https://collins145.github.io/fiverr-web-clone/" target="_blank"><img class="mb-20" src="/public/images/Screenshot(24).png" alt="fiverr-web-clone"></a>
+                    <div class="text-right">
+                        <h4 class="text-green text-lg">Project</h4>
+                        <h1 class="text-light-gray hover:text-green font-bold text-2xl pb-8">Fiverr-web-clone</h1>
+                        <p class="bg-blue-base rounded p-6 shadow-xl ml-0 sm:ml-16">
+                           <span class="text-deep-gray text-lg leading-relaxed">
+                                Your one stop site for hiring tech talent and software engineers. <br>
+                                Worked part time as a developer.
+                            </span>
+                        </p>
+                    </div>
+                        <div class=" text-left mt-10">
+                            <h4 class="text-green text-lg">Project</h4>
+                            <h1 class="text-light-gray hover:text-green font-bold text-2xl pb-8">Bolt-tailwind-project</h1>
+                            <p class="bg-blue-base rounded p-6 shadow ml-0 sm:ml-16">
+                                <span class="text-deep-gray text-lg">
+                                    Bolt is a transportation app used for taking fast and affordable e-scooter rides. <br>
+                                    Skip the rush hour hassle and public transport headache, get there quickly, safely and conveniently on a Bolt Scooter.
+                                </span>
+                            </p>
+                        </div>   
+                            <a href="https://collins145.github.io/tailwind-boltclone/"><img class="" src="/public/images/Screenshot(25).png" alt="bolt-clone"></a>
+                </div>
+        </section>
+        <section id="contact" class="py-20">
+            <div class="mx-auto">
+                <div class="text-center">
+                    <h3 class="text-green"><span class="mr-2 text-xl">04.</span><span class="text-xl">What's Next</span></h3>
+                    <h1 class="text-5xl text-light-gray font-bold pb-4">Get in Touch</h1>
+                    <p class="pb-8 text-md">
+                         In need of a Website , Contact me below for a booking. <br>
+                         Feel free to say hi or if you have any question, my inbox is open! :)
+                    </p>
+                    <a href="Tel:+254795315719"><span class="border rounded py-2 px-4 text-green">Contact Collins</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="bg-bg-dark-blue py-10">
+            <div class="flex space-x-4 justify-center">
+                <a class="hover:text-green" href="https://www.linkedin.com/feed/" target="_blank"><img class="h-5 w-5 text-light-gray hover:text-green" src="http://www.entypo.com/images/linkedin.svg" alt="linkedin"></a>
+                <a class="hover:text-green" href="https://www.facebook.com/" target="_blank"><img class="h-5 w-5 text-light-gray hover:text-green" src="http://www.entypo.com/images/facebook.svg" alt="facebook"></a>
+                <a class="hover:text-green" href="https://www.instagram.com/" target="_blank"><img class="h-5 w-5 text-light-gray hover:text-green" src="http://www.entypo.com/images/instagram.svg" alt="instagram"></a>
+                <a class="hover:text-green" href="https://github.com/" target="_blank"><img class="h-5 w-5 text-light-gray hover:text-green" src="http://www.entypo.com/images/github-with-circle.svg" alt="github"></a>
+            </div>    
+                <p class="text-center hover:text-green pt-4">Designed and Built by Collins Omondi</p>
+                <div class="flex justify-center space-x-2 pt-4">
+                    <img src="http://www.entypo.com/images/star.svg" alt="" class="h-4 w-4">
+                    <img src="http://www.entypo.com/images/star.svg" alt="" class="h-4 w-4">
+                    <img src="http://www.entypo.com/images/star.svg" alt="" class="h-4 w-4">
+                </div>
+        </section>    
+    </footer>
+    <script></script>
+</body>
+</html>
