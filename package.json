@@ -1,9 +1,10 @@
 {
-  "name": "project-5",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "My portfolio",
   "main": "index.js",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "mix",
     "watch": "mix watch",
     "watch-poll": "mix watch -- --watch-options-poll=1000",
@@ -13,10 +14,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://Collins145.github.io/myportfolio",
   "devDependencies": {
     "cross-env": "^7.0.3",
     "laravel-mix": "^6.0.19",
-    "postcss": "^8.3.0"
+    "postcss": "^8.1.14"
   },
   "dependencies": {
     "gh-pages": "^3.2.0",
