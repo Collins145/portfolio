@@ -14,7 +14,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://Collins145.github.io/myportfolio",
+  "homepage": "https://Collins145.github.io/portfolio",
   "devDependencies": {
     "cross-env": "^7.0.3",
     "laravel-mix": "^6.0.19",
