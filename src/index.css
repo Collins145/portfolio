@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Open Sans", sans-serif;
+    color: #fff;
+    position: relative;
+    background-color: #040404;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    background: #040404;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  @media (min-width: 1024px) {
+    body::before {
+      background-attachment: fixed;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+/* Custom styles and animations */
+.section-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #4ceb95;
+  margin-left: 10px;
+}
+
+.section-title p {
+  margin: 0 0 15px 0;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+/* Resume timeline dot */
+.resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #18d26e;
+  border: 2px solid #18d26e;
+}
+
+/* Portfolio box hover corners */
+.portfolio-wrap-box::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  width: 48px;
+  height: 48px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 20;
+  opacity: 0;
+}
+
+.portfolio-wrap-box::after {
+  content: "";
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  width: 48px;
+  height: 48px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transition: all 0.5s ease 0s;
+  z-index: 20;
+  opacity: 0;
+}
+
+.portfolio-wrap-box:hover::before {
+  top: 15px;
+  left: 15px;
+  opacity: 1;
+}
+
+.portfolio-wrap-box:hover::after {
+  bottom: 15px;
+  right: 15px;
+  opacity: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #040404;
+}
+::-webkit-scrollbar-thumb {
+  background: #18d26e;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #15bb62;
+}

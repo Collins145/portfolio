@@ -4,10 +4,9 @@ body {
   text-decoration: none;
 }
 
-header{
+header {
   background-color: black;
-  padding:0.5px;
-
+  padding: 0.5px;
 }
 
 .nav-menu {
@@ -19,13 +18,11 @@ header{
   margin: 0;
   padding: 0;
   list-style: none;
-
 }
 
 .nav-menu li + li {
   margin-left: 30px;
   float: right;
-
 }
 
 .nav-menu a {
@@ -37,7 +34,6 @@ header{
   font-weight: 400;
   padding: 5px;
   text-decoration: none;
-
 }
 
 .nav-menu a:before {
@@ -53,12 +49,16 @@ header{
   transition: all 0.3s ease-in-out 0s;
 }
 
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+.nav-menu a:hover:before,
+.nav-menu li:hover > a:before,
+.nav-menu .active > a:before {
   visibility: visible;
   width: 25px;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a {
   color: #fff;
   text-decoration: none;
 }
@@ -115,7 +115,9 @@ header{
   outline: none;
 }
 
-.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+.mobile-nav a:hover,
+.mobile-nav .active > a,
+.mobile-nav li:hover > a {
   color: #18d26e;
   text-decoration: none;
 }
@@ -146,30 +148,28 @@ header{
   color: #fff;
 }
 
-div#masonry { 
-  display: flex; 
-  flex-direction: row; 
+div#masonry {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   height: 60vw;
   max-height: 500px;
-  font-size: 0; 
+  font-size: 0;
   padding: 1px;
-
-
 }
-div#masonry img {  
+div#masonry img {
   width: 33.3%;
-  transition: .8s opacity;
+  transition: 0.8s opacity;
   margin-bottom: 10px;
-} 
-
+}
 
 @supports not (flex-wrap: wrap) {
-  div#masonry { display: block; }
-  div#masonry 
-  img {  
-  display: inline-block;
-  vertical-align: top;
-  padding: 2px;
+  div#masonry {
+    display: block;
+  }
+  div#masonry img {
+    display: inline-block;
+    vertical-align: top;
+    padding: 2px;
   }
 }
